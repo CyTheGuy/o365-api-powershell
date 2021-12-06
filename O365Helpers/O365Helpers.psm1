@@ -376,8 +376,8 @@ Function Rename-O365Group {
     $DefaultError = $ErrorActionPreference
     $Global:ErrorActionPreference = "Stop"
 
-    $PrimarySmtpAddress = $NewName + '@palantir.com'
-    $OtherEmail = $NewName + '@palantirtech.onmicrosoft.com'
+    $PrimarySmtpAddress = $NewName + '@domain.com'
+    $OtherEmail = $NewName + '@domain.onmicrosoft.com'
 
     $GroupInfo = Get-UnifiedGroup -Identity $GroupName -ErrorAction 'SilentlyContinue'
     if ($GroupInfo) {
